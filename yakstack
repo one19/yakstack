@@ -52,7 +52,11 @@ def add_yak_frame(stack, item):
 
 
 def add_yak_frames(stack, items):
-    return [add_yak_frame(stack, item) for item in items]
+    space = " ";
+    hairyAnd = " and";
+    sentence = space.join(items[1:]);
+    newItems = sentence.split(hairyAnd);
+    return [add_yak_frame(stack, item) for item in newItems]
 
 
 def switch_profile(stack, profile):
